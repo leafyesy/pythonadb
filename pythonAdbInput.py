@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-#使用Adb命令模拟按键事件
-#keyevent指的是android对应的keycode，比如home键的keycode=3，back键的keycode=4.
+# 使用Adb命令模拟按键事件
+# keyevent指的是android对应的keycode，比如home键的keycode=3，back键的keycode=4.
 
 import subprocess
 
@@ -10,10 +10,9 @@ orderTouchXY = 'adb shell input tap 250 250'
 orderSwipe = 'adb shell input swipe 100 100 250 100'
 orderInput = 'adb shell input text “001”'
 
-pi= subprocess.Popen(orderBack,shell=True,stdout=subprocess.PIPE)
+pi = subprocess.Popen(orderBack, shell=True, stdout=subprocess.PIPE)
 
-print pi.stdout.read()
-
+print(pi.stdout.read())
 
 '''
 KEYCODE_UNKNOWN=0;
